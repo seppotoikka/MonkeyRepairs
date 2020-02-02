@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MenuManager : MonoBehaviour
 {
     public GameObject buttons;
     public GameObject tutorial;
     public GameObject credits;
+
+    public TextMeshProUGUI players;
 
     bool quit;
     private void Update()
@@ -33,8 +36,14 @@ public class MenuManager : MonoBehaviour
         {
             quit = true;
             buttons.SetActive(false);
-            StartCoroutine(FadeToQuit());
+            Application.Quit();
         }
+    }
+
+    public void NumberOfPlayers()
+    {
+        GameManager.numberOfPlayers = GameManager.numberOfPlayers % 2 + 1;
+        players.text = GameManager.numberOfPlayers == 1 ? "1 Player" : "2 Players";
     }
 
     IEnumerator FadeToQuit()

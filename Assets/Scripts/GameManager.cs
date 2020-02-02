@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static int numberOfPlayers = 1;
+    public GameObject player2;
 
     public new static Camera camera;
     public static GameManager instance;
@@ -49,6 +51,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(BoxSpawner());
+
+        if (numberOfPlayers == 2)
+            player2.SetActive(true);
     }
 
     bool quit;
@@ -142,7 +147,7 @@ public class GameManager : MonoBehaviour
         destroyedItemsText.text = numberOfItemsDestroyed.ToString();
         Instantiate(explosionPrefab).transform.position = position + Vector3.up * 0.5f;
         AudioManager.instance.ExplosionSound();
-        if (numberOfItemsDestroyed == 10)
+        if (numberOfItemsDestroyed == 5)
         {
             Time.timeScale = 0;
             gameOverMenu.SetActive(true);

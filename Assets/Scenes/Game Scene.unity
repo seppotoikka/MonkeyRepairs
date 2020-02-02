@@ -3876,6 +3876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e85cf298a0661409c52a929e668ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player2: {fileID: 997539240}
   partBoxSpawnPoints: {fileID: 1026854091}
   boxPrefab: {fileID: 7586019309983808969, guid: 2644d0b3313a8274290c72ce73021c8d,
     type: 3}
@@ -4974,6 +4975,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 6388611633019829759, guid: e668b0eda1ce47342a84de0a5e29749a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6411045787478198169, guid: e668b0eda1ce47342a84de0a5e29749a,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -5476,6 +5482,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e668b0eda1ce47342a84de0a5e29749a, type: 3}
+--- !u!1 &997539240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6388611633019829759, guid: e668b0eda1ce47342a84de0a5e29749a,
+    type: 3}
+  m_PrefabInstance: {fileID: 997539239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1026854090
 GameObject:
   m_ObjectHideFlags: 0
@@ -7282,7 +7294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477265977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.26, y: 1.52, z: -8.4}
+  m_LocalPosition: {x: 13.64, y: 1.52, z: -8.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7575,7 +7587,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -13608,7 +13620,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
